@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Refresher | Chessboard and Queens</title>
+  </head>
+  <style>
+      .btn-work{
+        width: 50px;
+        height: 50px;
+        padding : 10px 10px 10px;
+        margin : 2px 2px;
+        text-align: center;
+        display:table-cell;
+        vertical-align:middle;
+      }
+      .btn-empty{
+          color : black;
+          font-weight: bolder;
+          font-size: 25px;
+      }
+  </style>
+  <body>
+    <h1 style="text-align: center;">Chessboard and Queens</h1>
+    <div class = "container">
+        <a href="index.html"> <h5>/Back</h5></a>
+    </div>
+    <div class = "container" id = "question">
+            
+    </div>
+    <div class = "container" style="text-align: center;" id = "game">
+    </div>
+
+    <div class = "container">
+        <br><br>
+        <input type = "button" class = "btn  btn-block waves-effect bg-warning" value = "EVALUATE" onclick = "evaluatefn(paths);">  
+    </div>
+
+
+    <div class = "container" id = "output">
+    </div>
+
+    <div class = "container" id = "idea">
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src = "chess_and_queen.js"></script>
+    <script>
+        var strq = "";
+        strq += '<p><br>Your task is to place eight queens on a chessboard so that no two queens are attacking each other. Each cell of the chessboard is either free or reserved, and you can only place queens on the free squares. Reserved cells are marked with "<b>X</b>".<br></p>'
+    
+        var stri = "";
+        stri += '<h3>Idea/Implementation</h3><p><br>The following game was taken from the famous problem <a href = "https://cses.fi/problemset/task/1624">Chessboard and Queens</a>. <br>You can find my solution to this problem over here : <a href = "https://cses.fi/problemset/result/2123605/">Link</a><br><br>This problem is implemented using javascript in which I backtracked and stored all possible arrangements that are possible to place the queens. The arrangement entered by user is then matched with these stored arrangements and the result is declared if it matches with any of the stored arrangement, then the user is succesful in arranging the queens .</p><br>';
+
+        document.getElementById("question").innerHTML = strq;
+        document.getElementById("idea").innerHTML = stri;
+    </script>
+</body>
+</html>
